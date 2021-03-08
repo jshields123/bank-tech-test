@@ -1,6 +1,34 @@
 # As a user
 # So I can keep my money safe
 # I want to be able to deposit money into an Account
+
+require 'account'
+
+describe Account do
+  it 'has a default balance of zero when asked for balance with no deposits' do
+    account = Account.new()
+    expect(account.balance).to eq 0
+  end
+
+
+  it 'takes in 100 and adds it to the account balance' do
+    account = Account.new()
+    account.deposit(100)
+    expect(account.balance).to eq 100
+  end
+
+  it 'takes in 200 and adds it to the account balance' do
+    account = Account.new()
+    account.deposit(200)
+    expect(account.balance).to eq 200
+  end
+  
+end
+
+
+
+
+
 #
 # As a user
 # SO I can track my money
@@ -14,18 +42,3 @@
 # So I can see how much money I have
 # I want to be able to see my balance
 #
-require 'account'
-
-describe Account do
-  it 'has a default balance of zero when asked for balance with no deposits' do
-    account = Account.new()
-    expect(account.balance).to eq 0
-  end
-
-
-  it 'takes in funds and adds it to the account balance' do
-    account = Account.new()
-    account.deposit(100)
-    expect(account.balance).to eq 100
-  end
-end
