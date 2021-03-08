@@ -14,3 +14,12 @@
 # So I can see how much money I have
 # I want to be able to see my balance
 #
+require 'account'
+
+describe Account do
+  it 'takes in funds and adds it to the account balance' do
+    account = Account.new()
+    account.deposit(100)
+    expect(account.balance).to eq 100
+  end
+end

@@ -60,7 +60,7 @@ So I can see everything on one summary
 I would like a bank statement.
 
 
-Class for bank Account:
+Class for Account:
 - one bank account can have many bank statements.
 
 - hash with list of       transactions = { "01/2/21" => +100, "02/2/21" => -100 }
@@ -73,7 +73,7 @@ Class for bank Account:
 - both the above with date stamps
 
 
-Class for bank statement:
+Class for statement:
 - require bank account
 
 - will need transactions hash, balance
