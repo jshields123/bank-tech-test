@@ -24,6 +24,12 @@ describe Account do
     expect(@account.balance).to eq 200
   end
 
+  it 'can take in 200 and then 100 and adds it to the balance' do
+    @account.deposit(200)
+    @account.deposit(100)
+    expect(@account.balance).to eq 300
+  end
+
 end
 
 
