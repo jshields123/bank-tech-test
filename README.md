@@ -79,3 +79,17 @@ Class for statement:
 - will need transactions hash, balance
 - display transactions method
 - display bank statement method.
+
+
+First user story:
+As a users
+So I can keep my money safe
+I want to be able to deposit money into an Account
+
+- create a account class
+- create a balance method
+- create default balance with 0
+- create initalize method with balance
+- create a deposit method.
+
+All above with corresponding tests.

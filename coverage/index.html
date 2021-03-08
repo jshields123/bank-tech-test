@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-08T15:21:52+00:00">2021-03-08T15:21:52+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2021-03-08T15:23:49+00:00">2021-03-08T15:23:49+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.39
+         1.38
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>23</b> relevant lines,
-    <span class="green"><b>23</b> lines covered</span> and
+    <b>24</b> relevant lines,
+    <span class="green"><b>24</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -84,11 +84,11 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#a8d381c521cb9828254c352d1e306bae22c29ecc" class="src_link" title="spec/account_spec.rb">spec/account_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">51</td>
-            <td class="cell--number">16</td>
-            <td class="cell--number">16</td>
+            <td class="cell--number">54</td>
+            <td class="cell--number">17</td>
+            <td class="cell--number">17</td>
             <td class="cell--number">0</td>
-            <td class="cell--number">1.19</td>
+            <td class="cell--number">1.18</td>
             
           </tr>
         
@@ -319,8 +319,8 @@
     
 
     <div class="t-line-summary">
-      <b>16</b> relevant lines.
-      <span class="green"><b>16</b> lines covered</span> and
+      <b>17</b> relevant lines.
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -497,24 +497,24 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="16">
+          <li class="covered" data-hits="1" data-linenumber="16">
+            <span class="hits">1</span>
+            
+
+            
+
+            <code class="ruby">    describe &#39;#deposit&#39; do</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="17">
             
             
 
             
 
             <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="17">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  it &#39;takes in 100 and adds it to the account balance&#39; do</code>
           </li>
         </div>
       
@@ -525,7 +525,7 @@
 
             
 
-            <code class="ruby">    @account.deposit(100)</code>
+            <code class="ruby">      it &#39;takes in 100 and adds it to the account balance&#39; do</code>
           </li>
         </div>
       
@@ -536,18 +536,18 @@
 
             
 
-            <code class="ruby">    expect(@account.balance).to eq 100</code>
+            <code class="ruby">        @account.deposit(100)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="20">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="20">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">        expect(@account.balance).to eq 100</code>
           </li>
         </div>
       
@@ -558,18 +558,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="22">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="22">
+            
             
 
             
 
-            <code class="ruby">  it &#39;takes in 200 and adds it to the account balance&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -580,7 +580,7 @@
 
             
 
-            <code class="ruby">    @account.deposit(200)</code>
+            <code class="ruby">      it &#39;takes in 200 and adds it to the account balance&#39; do</code>
           </li>
         </div>
       
@@ -591,18 +591,18 @@
 
             
 
-            <code class="ruby">    expect(@account.balance).to eq 200</code>
+            <code class="ruby">        @account.deposit(200)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="25">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="25">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">        expect(@account.balance).to eq 200</code>
           </li>
         </div>
       
@@ -613,18 +613,18 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="27">
-            <span class="hits">1</span>
+          <li class="never" data-hits="" data-linenumber="27">
+            
             
 
             
 
-            <code class="ruby">  it &#39;can take in 200 and then 100 and adds it to the balance&#39; do</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -635,7 +635,7 @@
 
             
 
-            <code class="ruby">    @account.deposit(200)</code>
+            <code class="ruby">      it &#39;can take in 200 and then 100 and adds it to the balance&#39; do</code>
           </li>
         </div>
       
@@ -646,7 +646,7 @@
 
             
 
-            <code class="ruby">    @account.deposit(100)</code>
+            <code class="ruby">        @account.deposit(200)</code>
           </li>
         </div>
       
@@ -657,18 +657,18 @@
 
             
 
-            <code class="ruby">    expect(@account.balance).to eq 300</code>
+            <code class="ruby">        @account.deposit(100)</code>
           </li>
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="31">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="31">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">  end</code>
+            
+
+            <code class="ruby">        expect(@account.balance).to eq 300</code>
           </li>
         </div>
       
@@ -679,7 +679,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">      end</code>
           </li>
         </div>
       
@@ -690,7 +690,7 @@
 
             
 
-            <code class="ruby">end</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -701,7 +701,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -723,7 +723,7 @@
 
             
 
-            <code class="ruby"></code>
+            <code class="ruby">end</code>
           </li>
         </div>
       
@@ -756,7 +756,7 @@
 
             
 
-            <code class="ruby">#</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -767,7 +767,7 @@
 
             
 
-            <code class="ruby"># As a user</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -778,7 +778,7 @@
 
             
 
-            <code class="ruby"># SO I can track my money</code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -789,7 +789,7 @@
 
             
 
-            <code class="ruby"># I want to be able to see dates on activity</code>
+            <code class="ruby">#</code>
           </li>
         </div>
       
@@ -800,7 +800,7 @@
 
             
 
-            <code class="ruby">#</code>
+            <code class="ruby"># As a user</code>
           </li>
         </div>
       
@@ -811,7 +811,7 @@
 
             
 
-            <code class="ruby"># As a user</code>
+            <code class="ruby"># SO I can track my money</code>
           </li>
         </div>
       
@@ -822,7 +822,7 @@
 
             
 
-            <code class="ruby"># So I can use my money</code>
+            <code class="ruby"># I want to be able to see dates on activity</code>
           </li>
         </div>
       
@@ -833,7 +833,7 @@
 
             
 
-            <code class="ruby"># I want to be able to withdraw my money</code>
+            <code class="ruby">#</code>
           </li>
         </div>
       
@@ -844,7 +844,7 @@
 
             
 
-            <code class="ruby">#</code>
+            <code class="ruby"># As a user</code>
           </li>
         </div>
       
@@ -855,7 +855,7 @@
 
             
 
-            <code class="ruby"># As a user</code>
+            <code class="ruby"># So I can use my money</code>
           </li>
         </div>
       
@@ -866,7 +866,7 @@
 
             
 
-            <code class="ruby"># So I can see how much money I have</code>
+            <code class="ruby"># I want to be able to withdraw my money</code>
           </li>
         </div>
       
@@ -877,12 +877,45 @@
 
             
 
-            <code class="ruby"># I want to be able to see my balance</code>
+            <code class="ruby">#</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="51">
+            
+            
+
+            
+
+            <code class="ruby"># As a user</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="52">
+            
+            
+
+            
+
+            <code class="ruby"># So I can see how much money I have</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="53">
+            
+            
+
+            
+
+            <code class="ruby"># I want to be able to see my balance</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="54">
             
             
 
