@@ -5,24 +5,25 @@
 require 'account'
 
 describe Account do
+  before(:each) do
+    @account = Account.new
+  end
+
   it 'has a default balance of zero when asked for balance with no deposits' do
-    account = Account.new()
-    expect(account.balance).to eq 0
+    expect(@account.balance).to eq 0
   end
 
 
   it 'takes in 100 and adds it to the account balance' do
-    account = Account.new()
-    account.deposit(100)
-    expect(account.balance).to eq 100
+    @account.deposit(100)
+    expect(@account.balance).to eq 100
   end
 
   it 'takes in 200 and adds it to the account balance' do
-    account = Account.new()
-    account.deposit(200)
-    expect(account.balance).to eq 200
+    @account.deposit(200)
+    expect(@account.balance).to eq 200
   end
-  
+
 end
 
 
