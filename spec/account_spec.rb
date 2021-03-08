@@ -17,6 +17,8 @@
 require 'account'
 
 describe Account do
+
+
   it 'takes in funds and adds it to the account balance' do
     account = Account.new()
     account.deposit(100)
