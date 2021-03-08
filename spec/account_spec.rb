@@ -50,6 +50,10 @@ describe Account do
       @account.withdraw(100)
       expect(@account.balance).to eq 100
     end
+    it 'takes 100 off account balance when empty ' do
+      @account.withdraw(100)
+      expect(@account.balance).to eq -100
+    end
   end
 end
 
