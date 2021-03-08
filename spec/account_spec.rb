@@ -17,6 +17,10 @@
 require 'account'
 
 describe Account do
+  it 'has a default balance of zero when asked for balance with no deposits' do
+    account = Account.new()
+    expect(account.balance).to eq 0
+  end
 
 
   it 'takes in funds and adds it to the account balance' do
