@@ -47,14 +47,14 @@ As a user
 So I can see how much money I have
 I want to be able to see my balance
 
-As a user
-SO I can track my money
-I want to be able to see dates on activity
 
 As a user
 So I can use my money
 I want to be able to withdraw my money
 
+As a user
+SO I can track my money
+I want to be able to see dates on activity
 
 
 As a user
@@ -91,7 +91,38 @@ I want to be able to deposit money into an Account
 - create a account class
 - create a balance method
 - create default balance with 0
-- create initalize method with balance
+- create initialize method with balance
 - create a deposit method.
 
 All above with corresponding tests.
+
+Second user story:
+As a user
+So I can see how much money I have
+I want to be able to see my balance
+
+- see above, test pass due to deposit needing balance method.
+
+Third User story:
+As a user
+So I can use my money
+I want to be able to withdraw my money
+
+- add in withdraw method and test
+
+Fourth User story:
+As a user
+So I can track my money
+I want to be able to see dates on activity
+
+- add in date constant into a string for withdraw and deposit.
+
+Fifth User story:
+As a user
+So I can see everything on one summary
+I would like a bank statement.
+
+- added a statement Class
+- add in a transactions constant with array to store transactions in account.
+- add in method for print_statement that will take transactions info and format
+into statement view.
