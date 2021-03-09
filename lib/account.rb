@@ -12,7 +12,9 @@ class Account
   end
 
   def deposit(money)
+    date = Time.new.strftime("%d/%m/%Y")
     @balance += money
+    "#{date}, credit, #{money}"
   end
 
   def withdraw(money)
