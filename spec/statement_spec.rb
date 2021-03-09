@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 # As a user
 # So I can see everything on one summary
@@ -6,8 +7,8 @@
 require 'statement'
 
 describe Statement do
-
   describe '#print_statement' do
+    before(:each) { @account = Account.new }
 
     it 'shows a breakdown of transactions' do
       @account.deposit(1000)
@@ -17,5 +18,4 @@ describe Statement do
                                            #{DATE} || #{deposit} || || #{balance}"
     end
   end
-
 end
