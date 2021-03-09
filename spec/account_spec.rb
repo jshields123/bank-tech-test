@@ -54,7 +54,14 @@ describe Account do
       @account.withdraw(100)
       expect(@account.balance).to eq -100
     end
+
+    it 'displays time a transaction was made' do
+      @account.deposit(100)
+      expect(@account.withdraw(100)).to eq '09/03/2021, debit, 100'
+    end
   end
+
+
 end
 
 #
