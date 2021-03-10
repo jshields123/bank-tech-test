@@ -7,17 +7,16 @@
 require 'statement'
 
 describe Statement do
-  describe '#print_statement' do
+  let(:statement) { Statement.new }
+  let(:transactions) { [transaction_one, transaction_two] }
+  let(:transaction_one) { instance_double(Transaction, date: '02/03/2021', credit: 1000, debit: 0, balance: 1000) }
+  let(:transaction_two) { instance_double(Transaction, date: '03/03/2021', credit: 0, debit: 300, balance: 700) }
 
+  describe ' print_statement' do
     it 'shows a breakdown of transactions' do
-      account = Account.new
-      statement = Statement.new
-      account.deposit(1000)
-      account.withdraw(300)
       expect do
-      statement.print_statement([["03/03/2021", "300", "700"],["03/03/2021", "1000", "1000"] ])
-
-    end.to output("date || credit || debit || balance\n03/03/2021 || || 300 || 700\n 03/03/2021 || 1000 || || 1000").to_stdout
+        statement.print_statement(transactions)
+      end.to output("date || credit || debit || balance\n 02/03/2021 || 1000 || 0 || 1000\n 03/03/2021 || 0 || 300 || 700\n ").to_stdout
+    end
   end
-end
 end

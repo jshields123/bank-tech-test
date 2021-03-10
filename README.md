@@ -126,3 +126,11 @@ I would like a bank statement.
 - add in a transactions constant with array to store transactions in account.
 - add in method for print_statement that will take transactions info and format
 into statement view.
+
+Whilst trying to create a statement class that would allow statement to be called
+I found it difficult and after some time decided another approach would help.
+
+This involved going through and redesigning the app to have more classes and this
+gave greater clarity for myself and also split the responsibilities across classes.
+
+I created a transaction class which provided more clarity and format to the data.

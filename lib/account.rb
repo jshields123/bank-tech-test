@@ -13,34 +13,31 @@ class Account
   def initialize
     @balance = DEFAULT_BALANCE
     @transactions = []
-    @transaction_count = -1
   end
 
   def deposit(value)
-    @transaction_count += 1
     @balance += value
     transaction = create_deposit_trans(value)
     @transactions << transaction
   end
 
   def withdraw(value)
-    @transaction_count += 1
     @balance -= value
     transaction = create_withdraw_trans(value)
     @transactions << transaction
   end
 
-  private
-
   def print_statement
-    Statement.print_statement(@transactions)
+    Statement.new.print_statement(@transactions)
   end
 
+  private
+
   def create_deposit_trans(value)
-    transaction = Transaction.new("DATE", value, 0, @balance)
+    transaction = Transaction.new(DATE, value, 0, @balance)
   end
 
   def create_withdraw_trans(value)
-    transaction = Transaction.new("DATE", 0, value, @balance)
+    transaction = Transaction.new(DATE, 0, value, @balance)
   end
 end
