@@ -34,10 +34,10 @@ class Account
   private
 
   def create_deposit_trans(value)
-    transaction = Transaction.new(DATE, value, 0, @balance)
+    Transaction.new(DATE, value, 0, @balance)
   end
 
   def create_withdraw_trans(value)
-    transaction = Transaction.new(DATE, 0, value, @balance)
+    Transaction.new(DATE, 0, value, @balance)
   end
 end

@@ -135,6 +135,15 @@ gave greater clarity for myself and also split the responsibilities across class
 
 I created a transaction class which provided more clarity and format to the data.
 
+How to USE:
+
+- Clone repo
+- run `bundle install`
+- run `rspec --init`
+
+To run the tests you need to run `rspec`
+
+To run the app follow the demo below in the command line IRB.
 
 IRB DEMO:
 <img width="1075" alt="screenshot" src='./image/code_snip.png'>
