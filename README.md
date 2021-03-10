@@ -134,3 +134,7 @@ This involved going through and redesigning the app to have more classes and thi
 gave greater clarity for myself and also split the responsibilities across classes.
 
 I created a transaction class which provided more clarity and format to the data.
+
+
+IRB DEMO:
+<img width="1075" alt="screenshot" src='./image/code_snip.png'>
