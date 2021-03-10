@@ -8,14 +8,16 @@ require 'statement'
 
 describe Statement do
   describe '#print_statement' do
-    before(:each) { @account = Account.new }
 
     it 'shows a breakdown of transactions' do
-      @account.deposit(1000)
-      @account.withdraw(300)
-      expect(@account.print_statement).to eq "date || credit || debit || balance
-                                           #{DATE} || || #{withdrawn} || #{balance}
-                                           #{DATE} || #{deposit} || || #{balance}"
-    end
+      account = Account.new
+      statement = Statement.new
+      account.deposit(1000)
+      account.withdraw(300)
+      expect do
+      statement.print_statement([["03/03/2021", "300", "700"],["03/03/2021", "1000", "1000"] ])
+
+    end.to output("date || credit || debit || balance\n03/03/2021 || || 300 || 700\n 03/03/2021 || 1000 || || 1000").to_stdout
   end
+end
 end

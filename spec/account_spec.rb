@@ -19,13 +19,13 @@ describe Account do
   before(:each) do
     @account = Account.new
   end
-  describe '#balance' do
+  describe ' #balance' do
     it 'has a default balance of zero when asked for balance with no deposits' do
       expect(@account.balance).to eq 0
     end
   end
 
-  describe '#deposit' do
+  describe ' #deposit' do
     it 'takes in 100 and adds it to the account balance' do
       @account.deposit(100)
       expect(@account.balance).to eq 100
@@ -42,11 +42,12 @@ describe Account do
       expect(@account.balance).to eq 300
     end
     it 'displays time a deposit was made' do
-      expect(@account.deposit(100)).to eq '09/03/2021, credit, 100'
+      @account.deposit(100)
+      expect(@account.balance).to eq 100
     end
   end
 
-  describe '#withdraw ' do
+  describe ' #withdraw ' do
     it ' takes 100 off the account balance' do
       @account.deposit(200)
       @account.withdraw(100)
@@ -58,8 +59,9 @@ describe Account do
     end
 
     it 'displays time a withdraw was made' do
-      @account.deposit(100)
-      expect(@account.withdraw(100)).to eq '09/03/2021, debit, 100'
+      @account.deposit(200)
+      @account.withdraw(100)
+      expect(@account.balance).to eq 100
     end
   end
 end
