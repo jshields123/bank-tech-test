@@ -20,34 +20,31 @@ describe Account do
   describe ' #deposit' do
     it 'calls deposit method on transaction' do
       allow(transaction).to receive(:create_deposit_trans)
-      transaction.create_deposit_trans(100)
+      account.deposit(100)
       expect(transaction).to have_received(:create_deposit_trans)
     end
 
-    it 'takes in 200 and adds it to the account balance' do
-      allow(transaction).to receive(:create_deposit_trans)
-      allow(account).to receive(:balance).and_return(200)
-      transaction.create_deposit_trans(200)
-      expect(account.balance).to eq 200
-    end
-
-    it 'can take in 200 and then 100 and adds it to the balance' do
-      @account.deposit(200)
-      @account.deposit(100)
-      expect(@account.balance).to eq 300
-    end
-    it 'displays time a deposit was made' do
-      @account.deposit(100)
-      expect(@account.balance).to eq 100
-    end
+  #   it 'takes in 200 and adds it to the account balance' do
+  #     allow(transaction).to receive(:create_deposit_trans)
+  #     allow(account).to receive(:balance).and_return(200)
+  #     transaction.create_deposit_trans(200)
+  #     expect(account.balance).to eq 200
+  #   end
+  #
+  #
+  # #   it 'displays time a deposit was made' do
+  # #     @account.deposit(100)
+  # #     expect(@account.balance).to eq 100
+  # #   end
   end
 
   describe ' #withdraw ' do
-    it ' takes 100 off the account balance' do
-      @account.deposit(200)
-      @account.withdraw(100)
-      expect(@account.balance).to eq 100
+    it ' calls withdraw method on transaction' do
+      allow(transaction).to receive(:create_withdraw_trans)
+      account.withdraw(5)
+      expect(transaction).to have_received(:create_withdraw_trans)
     end
+
     it 'takes 100 off account balance when empty ' do
       @account.withdraw(100)
       expect(@account.balance).to eq(-100)
