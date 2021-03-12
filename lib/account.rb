@@ -8,7 +8,7 @@ class Account
 
   DEFAULT_BALANCE = 0
   DATE = Time.new.strftime('%d/%m/%Y')
-  TRANSACTIONS = @transactions
+
 
   def initialize
     @balance = DEFAULT_BALANCE
@@ -17,14 +17,14 @@ class Account
 
   def deposit(value)
     @balance += value
-    transaction = create_deposit_trans(value)
-    @transactions << transaction
+    deposit_trans = create_deposit_trans(value)
+    @transactions << deposit_trans
   end
 
   def withdraw(value)
     @balance -= value
-    transaction = create_withdraw_trans(value)
-    @transactions << transaction
+    withdraw_trans = create_withdraw_trans(value)
+    @transactions << withdraw_trans
   end
 
   def print_statement
