@@ -2,12 +2,18 @@
 
 require 'account'
 describe Account do
-  before(:each) do
-    @account = Account.new
+  subject(:account) { Account.new(transaction) }
+  let(:transaction) { double("transaction")}
+
+  describe '#initialize' do
+    it 'creates an instance of transaction' do
+      expect(account.transaction).to eq(transaction)
+    end
   end
+
   describe ' #balance' do
     it 'has a default balance of zero when asked for balance with no deposits' do
-      expect(@account.balance).to eq 0
+      expect(account.balance).to eq 0
     end
   end
 
