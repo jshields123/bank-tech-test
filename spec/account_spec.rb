@@ -18,14 +18,17 @@ describe Account do
   end
 
   describe ' #deposit' do
-    it 'takes in 100 and adds it to the account balance' do
-      @account.deposit(100)
-      expect(@account.balance).to eq 100
+    it 'calls deposit method on transaction' do
+      allow(transaction).to receive(:create_deposit_trans)
+      transaction.create_deposit_trans(100)
+      expect(transaction).to have_received(:create_deposit_trans)
     end
 
     it 'takes in 200 and adds it to the account balance' do
-      @account.deposit(200)
-      expect(@account.balance).to eq 200
+      allow(transaction).to receive(:create_deposit_trans)
+      allow(account).to receive(:balance).and_return(200)
+      transaction.create_deposit_trans(200)
+      expect(account.balance).to eq 200
     end
 
     it 'can take in 200 and then 100 and adds it to the balance' do
